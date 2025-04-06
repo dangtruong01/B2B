@@ -3,21 +3,21 @@ import { Button } from "@/components/ui/button"
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-start justify-center pt-24 px-4">
-      <section className="text-center space-y-6">
-        <div className="space-y-2">
-          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">
+    <div className="min-h-screen bg-white flex items-center justify-center px-4">
+      <section className="text-center space-y-8 max-w-2xl">
+        <div className="space-y-4">
+          <h1 className="text-5xl font-bold text-purple-900 leading-tight tracking-tight">
             BookSwap
           </h1>
-          <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
+          <p className="text-gray-600 text-lg md:text-xl">
             Exchange pre-loved books with readers in your community. Give your books a second life.
           </p>
         </div>
-        <div className="space-x-4">
-          <Button asChild>
+        <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <Button asChild className="bg-purple-600 hover:bg-purple-700 text-white">
             <Link href="/auth/login">Get Started</Link>
           </Button>
-          <Button variant="outline" asChild>
+          <Button asChild variant="outline" className="border-purple-600 text-purple-600 hover:bg-purple-50">
             <Link href="/browse">Browse Library</Link>
           </Button>
         </div>

@@ -358,7 +358,7 @@ export default function Dashboard() {
       
       {/* Add Book Dialog */}
       <Dialog open={isAddBookDialogOpen} onOpenChange={setIsAddBookDialogOpen}>
-        <DialogContent className="sm:max-w-[500px]">
+        <DialogContent className="w-full max-w-sm sm:max-w-md md:max-w-lg max-h-[90vh] overflow-y-auto my-2">
           <DialogHeader>
             <DialogTitle>Add a New Book</DialogTitle>
             <DialogDescription>
@@ -368,15 +368,6 @@ export default function Dashboard() {
           
           <AddBookForm onSuccess={fetchMyBooks} onCancel={closeModal} />
 
-          {/* <AddBookForm 
-            onSuccess={(newBook) => {
-              // Add the new book to the list
-              setMyBooks((prevBooks) => [...prevBooks, newBook]);
-              // Close the dialog
-              setIsAddBookDialogOpen(false);
-            }}
-            onCancel={() => setIsAddBookDialogOpen(false)}
-          /> */}
         </DialogContent>
       </Dialog>
     </div>

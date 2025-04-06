@@ -47,23 +47,26 @@ export default function SignUp() {
         router.push("/auth/login")
       }
     } catch (error: unknown) {
-        if (axios.isAxiosError(error)) {
-            toast.error(error.response?.data?.detail || "Sign up error")
-          } else {
-            toast.error("An unexpected error occurred. Please try again later.")
-          }
+      if (axios.isAxiosError(error)) {
+        toast.error(error.response?.data?.detail || "Sign up error")
+      } else {
+        toast.error("An unexpected error occurred. Please try again later.")
+      }
     } finally {
       setIsLoading(false)
     }
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center px-4 py-12">
-      <Card className="w-full max-w-md">
+    <div className="min-h-screen bg-white flex items-center justify-center px-4">
+      <Card className="w-full max-w-md border shadow-sm">
         <CardHeader className="space-y-1">
-          <CardTitle className="text-2xl font-bold">Create an account</CardTitle>
-          <CardDescription>Enter your email and password to create your account</CardDescription>
+          <CardTitle className="text-2xl font-bold text-purple-900">Create an account</CardTitle>
+          <CardDescription className="text-gray-600">
+            Enter your email and password to create your account
+          </CardDescription>
         </CardHeader>
+
         <form onSubmit={handleSignUp}>
           <CardContent className="space-y-4">
             <div className="space-y-2">
@@ -71,12 +74,13 @@ export default function SignUp() {
               <Input
                 id="email"
                 type="email"
-                placeholder="m@example.com"
+                placeholder="you@example.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
               />
             </div>
+
             <div className="space-y-2">
               <Label htmlFor="password">Password</Label>
               <div className="relative">
@@ -91,7 +95,7 @@ export default function SignUp() {
                   type="button"
                   variant="ghost"
                   size="icon"
-                  className="absolute right-0 top-0 h-full px-3 py-2 hover:bg-transparent"
+                  className="absolute right-0 top-0 h-full px-3 py-2 text-gray-500"
                   onClick={() => setShowPassword(!showPassword)}
                 >
                   {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
@@ -101,6 +105,7 @@ export default function SignUp() {
                 </Button>
               </div>
             </div>
+
             <div className="space-y-2">
               <Label htmlFor="confirmPassword">Confirm Password</Label>
               <Input
@@ -112,13 +117,19 @@ export default function SignUp() {
               />
             </div>
           </CardContent>
+
           <CardFooter className="flex flex-col space-y-4 mt-4">
-            <Button type="submit" className="w-full" disabled={isLoading}>
+            <Button
+              type="submit"
+              className="w-full bg-purple-600 hover:bg-purple-700 text-white"
+              disabled={isLoading}
+            >
               {isLoading ? "Creating account..." : "Create account"}
             </Button>
-            <div className="text-center text-sm">
+
+            <div className="text-center text-sm text-gray-600">
               Already have an account?{" "}
-              <Link href="/auth/login" className="underline">
+              <Link href="/auth/login" className="text-purple-600 underline">
                 Sign in
               </Link>
             </div>

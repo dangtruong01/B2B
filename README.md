@@ -40,6 +40,17 @@ Users can refine their browsing experience with a powerful filtering system:
 
 ## Tech Stack
 
+### Environment Variables
+
+The backend requires environment variables to be set for Supabase integration and AI functionality.
+
+A `.env-sample` file is provided in the `backend/` directory to help you get started. Copy it to `.env` and fill in the required values:
+- `SUPABASE_URL`, `SUPABASE_KEY`, and `SUPABASE_JWT_SECRET` can be found in your Supabase project settings.
+- `OPENROUTER_API_KEY` is needed for AI-powered features like auto-filling book information. You can get it from [openrouter.ai](https://openrouter.ai).
+
+Make sure to restart the backend server after setting up your `.env` file.
+
+
 ### Backend
 - FastAPI (Python)
 - Supabase (PostgreSQL + Authentication + Storage)

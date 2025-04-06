@@ -2,6 +2,8 @@
 
 B2B is a full-stack web application that allows users to list, browse, swipe, and exchange books with others in their community. The platform focuses on peer-to-peer exchange, social discovery, and encouraging sustainable reading habits.
 
+[![b2b.png](https://media-hosting.imagekit.io/1f2077e36ccf46da/b2b.png?Expires=1838547543&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=Wd4f~5HSV5OQjdHjxjH0M3U~5LmyCDgXBw~29ERuUWxcgGyWbp~-vXHg7K1yFmMHHtm0rUU6YZxGaddvIkFB4oDo1jCnikEIAWE59oDpoLJ7WVR6s1lZUYIZ6Li8bNW8-y-JW8vhDfYbFDeLulErgzsIBjerka7E9UBKIUsoJGuptDLQM5ml8yed-Z6vqwz6nc5BvAkIFJuT1pBaWwdlCFP1XbGpVySJVxEc8xWKXg-SgSeS4P8aqA38kfEGyVsK4WmjAK5eIwEbzcAgLyuegdCWygkm04~jGJhvY7DHa0kHZ1Kk3e6TvjCfdyh6EfH0f~vA-EqJH0jp7lo1kv-MIQ__)](https://youtu.be/Y9XeP8FnnFI)
+
 ## Features
 
 ### Book Exchange

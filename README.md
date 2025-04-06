@@ -38,6 +38,7 @@ Users can refine their browsing experience with a powerful filtering system:
 - Tabbed view for "My Books" and "Exchange Requests."
 - Allows toggling book availability, deleting listings, or marking books as exchanged.
 
+
 ## Tech Stack
 
 ### Environment Variables
@@ -49,7 +50,6 @@ A `.env-sample` file is provided in the `backend/` directory to help you get sta
 - `OPENROUTER_API_KEY` is needed for AI-powered features like auto-filling book information. You can get it from [openrouter.ai](https://openrouter.ai).
 
 Make sure to restart the backend server after setting up your `.env` file.
-
 
 ### Backend
 - FastAPI (Python)
@@ -64,6 +64,7 @@ Make sure to restart the backend server after setting up your `.env` file.
 - ShadCN UI (Component library)
 - Zod + React Hook Form (Validation and form handling)
 - Framer Motion (Animations for swipe transitions)
+
 
 ## Getting Started
 
@@ -103,6 +104,14 @@ npm run dev
 
 Visit: http://localhost:3000
 
+### API Documentation
+
+The backend is built using **FastAPI**, which auto-generates interactive documentation.
+
+After running the backend server, you can access the full API documentation at: http://localhost:8000/docs
+
+This includes all available endpoints, request/response formats, and allows you to test the API directly in the browser.
+
 ### Future Plans
 
 To further enhance user experience and platform capabilities, we plan to implement:
@@ -124,4 +133,14 @@ To further enhance user experience and platform capabilities, we plan to impleme
 
 6. **Notification System**  
    Enable in-app and email alerts for exchange requests, status updates, and user interactions.
+
+### Milestones
+
+- [x] MVP: User auth, book listing, basic exchange
+- [x] AI auto-fill from title
+- [x] Tinder-style swipe discovery
+- [ ] AI auto-fill from image (ETA: May 2025)
+- [ ] Enhanced recommendation system (ETA: June 2025)
+- [ ] Messaging + Profile features (ETA: July 2025)
+
 
